@@ -35,7 +35,9 @@ EOF
 	cd rhq
 	echo "Checkout $RHQ_RELEASE_BRANCH"
 	git checkout "$RHQ_RELEASE_BRANCH" >/dev/null 2>&1 || echo "Error checking out branch: $RHQ_RELEASE_BRANCH"
+	echo "Writing zanata.xml file"
 	echo_zanata_cfg > zanata.xml
+	echo "Invoking zanata-cli to push files"
 	zanata-cli push --includes "Messages.properties,MessageConstants.properties" -s "$TRANSLATIONS_DIR" -t "$TRANSLATIONS_DIR"
 )
 
