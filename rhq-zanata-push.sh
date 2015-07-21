@@ -10,7 +10,7 @@ echo_zanata_cfg () {
 <config xmlns="http://zanata.org/namespace/config/">
   <url>https://translate.jboss.org/</url>
   <project>jon32strings</project>
-  <project-version>jon33strings</project-version>
+  <project-version>jon33x</project-version>
   <project-type>properties</project-type>
 
   <locales>
